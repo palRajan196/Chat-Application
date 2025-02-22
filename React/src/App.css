@@ -121,11 +121,15 @@
     font-weight: 700;
     margin-right: 10px
   }
+  #chat-Box{
+    height: 200px;
+    margin-top: 100px;
+  }
   #input-Box{
     width: 80%;
     height: 50px;
     position: fixed;
-    bottom: 60px;
+    bottom: 10px;
     left: 9%;
   }
 }
