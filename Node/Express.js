@@ -5,11 +5,12 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 
 const app = express();
+const PORT = 5001;
 
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://chat-app-108.onrender.com",
   },
 });
 
@@ -71,6 +72,6 @@ io.on("connection", (socket) => {
 
 
 
-server.listen(5001, () => {
+server.listen(PORT, () => {
   console.log("Server is running on Port 5001");
 });
