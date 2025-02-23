@@ -131,7 +131,8 @@
     height: 200px;
     margin-top: 10px;
     position: sticky;
-    top: 120px;
+    /* top: 120px; */
+    bottom: 50px;
   }
   .message{
     width: 40%;
@@ -146,7 +147,8 @@
     height: 50px;
     margin-top: 20px;
     position: sticky;
-    top: 340px;
+    /* top: 340px; */
+    bottom: 10px;
     left: 0;
   }
   
