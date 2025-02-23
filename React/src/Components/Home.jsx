@@ -114,16 +114,16 @@ function Home() {
            
             <div className="message inMsg "></div>   */}
         </div>
-        
-        <div id="input-Box">
+
+      </div>
+      <div id="input-Box">
           <form onSubmit={sendMessage}>
             <input type="text" value={message} onChange={(e) => {setMessage(e.target.value)}} />
             <button type="submit">Send</button>
           </form>
         </div>
-
       </div>
-      </div>
+      
     </>
   );
 }

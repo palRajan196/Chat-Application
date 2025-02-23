@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center; 
  flex-direction: column; 
+ background-color: black;
 }
 #chat-Box{
   width: 90%;
@@ -48,6 +49,7 @@
   font-size: 15px;
   padding: 5px 10px;
   margin-left: 10px;
+  background-color: rgb(19, 19, 74);
 }
 #Status{
   margin-bottom: 20px;
@@ -63,7 +65,7 @@
 
 
 .seen-Message{
-  color: wheat;
+  color: white;
   position: relative;
   top: -15px;
   left: 10%;
@@ -107,14 +109,18 @@
   padding: 5px 10px;
   font-size: 15px;
   margin-left: 20px;
+  background-color: rgb(19, 19, 74);
 }
 
 @media only screen and (max-width:450px){
+  #Parent-Div{
   
-  #Room{
-     top: 80px;
   }
-  
+  #Room{
+    position: sticky;
+    top: 0px;
+    background-color: #06021c;
+  }
   #Room #Live{
     color: green;
     width: 30px;
@@ -122,15 +128,23 @@
     margin-right: 10px
   }
   #chat-Box{
-    height: 200px;
-    margin-top: 100px;
+    height: 250px;
+    margin-top: 10px;
+  }
+  .message{
+    width: 40%;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px gray;
   }
   #input-Box{
     width: 80%;
     height: 50px;
-    position: fixed;
-    bottom: 10px;
-    left: 9%;
+    position: relative;
+    margin-top: 35px;
+    left: 0;
   }
 }
 
