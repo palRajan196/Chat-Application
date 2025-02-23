@@ -118,7 +118,7 @@
   }
   #Room{
     position: sticky;
-    top: 0px;
+    top: 20px;
     background-color: #06021c;
   }
   #Room #Live{
@@ -128,8 +128,10 @@
     margin-right: 10px
   }
   #chat-Box{
-    height: 250px;
+    height: 200px;
     margin-top: 10px;
+    position: sticky;
+    top: 120px;
   }
   .message{
     width: 40%;
@@ -142,9 +144,13 @@
   #input-Box{
     width: 80%;
     height: 50px;
-    position: relative;
-    margin-top: 35px;
+    margin-top: 20px;
+    position: sticky;
+    top: 340px;
     left: 0;
+  }
+  #bottom{
+    height: 100vh;
   }
 }
 
