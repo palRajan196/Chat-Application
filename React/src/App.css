@@ -121,12 +121,10 @@ body{
      flex-direction: column;
      height: 100dvh; /* Adjusts dynamically */   
      border: 2px solid rgb(84, 67, 67);
-     /* position: fixed;
-     top: 120px; */
   }
   #Room{
-    position: sticky;
-    top: 20px;
+    position: fixed;
+    top: 250px;
     background-color: #06021c;
   }
   #Room #Live{
@@ -138,9 +136,8 @@ body{
   #chat-Box{
     height: 200px;
     margin-top: 10px;
-    /* position: sticky; */
-    /* top: 120px; */
-    bottom: 50px;
+    position: fixed;
+    bottom: 80px;
   }
   .message{
     width: 40%;
@@ -155,7 +152,7 @@ body{
     height: 50px;
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 20px;
   }
   
 }
