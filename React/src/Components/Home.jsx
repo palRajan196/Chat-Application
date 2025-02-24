@@ -27,7 +27,6 @@ function Home() {
 
   useEffect(()=>{
      socket.on("message-seen",(send)=>{
-      console.log("Send "+send);
       seenMessage();
   });
   },[])
@@ -35,14 +34,13 @@ function Home() {
   useEffect(()=>{  
     socket.on("live_update", (user)=>{
       setLive(true);
-    console.log("User is Live Chatting mode on");
   })
 },[])
 
   useEffect(()=>{
     socket.on("room_disconnect",(msg)=>{
       setLive(false);
-      console.log("user is diconnected chat mode off",msg);
+    //  console.log("user is diconnected chat mode off",msg);
     })
   },[])
 
@@ -70,7 +68,6 @@ function Home() {
  
   function appendChild(msg,type){
     event.preventDefault();
-    console.log("Append Child");
     let Msg_Box = document.getElementById("Msg-Box");
     let outMsg = document.createElement("p");
     outMsg.classList.add("message");

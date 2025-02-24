@@ -16,7 +16,7 @@ const io = new Server(server, {
 
 
 io.on("connection", (socket) => {
-  console.log("User is Connected");
+  //console.log("User is Connected");
 
   // Join Room
  
@@ -26,7 +26,7 @@ io.on("connection", (socket) => {
 
   if (roomSize < 1) {
     socket.join(roomId);
-    console.log(`User ${socket.id} joined room ${roomId}`);
+   // console.log(`User ${socket.id} joined room ${roomId}`);
 
     io.to(roomId).emit("room_update", {
       message: `Joinned Succesfully`,
@@ -40,7 +40,6 @@ io.on("connection", (socket) => {
     });
   }
   } else {
-    console.log("Room was fulled");
     socket.emit("room_update", 
       { message: "Room is full. Only 2 users allowed.", 
         status : false,
@@ -65,7 +64,6 @@ io.on("connection", (socket) => {
   });
 
   socket.on("revieved-message", (room) => {
-    console.log("seen msg", room);
     socket.to(room).emit("message-seen", true);
   });
 });
