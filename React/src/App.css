@@ -124,7 +124,7 @@ body{
   }
   #Room{
     position: fixed;
-    top: 250px;
+    top: 300px;
     background-color: #06021c;
   }
   #Room #Live{
