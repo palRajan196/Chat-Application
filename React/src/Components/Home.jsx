@@ -105,21 +105,20 @@ function Home() {
         <div id="Header">Chat App</div>
       <div id="Room">
             <div id="Live">{(Live)?"Live":""}</div>
-            <input type="text" onChange={(e)=>setRoom(e.target.value)}/>
-            <button onClick={joinRoom} disabled={hit}>Set Room</button>
+            <form onSubmit={joinRoom}>
+            <input type="text" minLength="1" required  onChange={(e)=>setRoom(e.target.value)}/>
+            <button type="submit" disabled={hit}>Set Room</button>
+            </form>
         </div>
         <div id="Status">{status}</div>
       <div id="chat-Box">
         <div id="Msg-Box">
-            {/* <div className="message outMsg " id=""></div>
-           
-            <div className="message inMsg "></div>   */}
         </div>
 
       </div>
       <div id="input-Box">
           <form onSubmit={sendMessage}>
-            <input type="text" value={message} onChange={(e) => {setMessage(e.target.value)}} />
+            <input type="text" value={message} minLength="1" required onChange={(e) => {setMessage(e.target.value)}} />
             <button type="submit">Send</button>
           </form>
         </div>

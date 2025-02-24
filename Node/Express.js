@@ -10,7 +10,7 @@ const PORT = process.env.PORT||5001;
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-app-108.onrender.com",
+     origin: "https://chat-app-108.onrender.com",
   },
 });
 
@@ -24,7 +24,7 @@ io.on("connection", (socket) => {
   const room = io.sockets.adapter.rooms.get(roomId);
   const roomSize = room ? room.size : 0;
 
-  if (roomSize < 2) {
+  if (roomSize < 1) {
     socket.join(roomId);
     console.log(`User ${socket.id} joined room ${roomId}`);
 
