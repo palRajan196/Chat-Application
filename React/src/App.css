@@ -1,8 +1,10 @@
-*{
+body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: black;
+  height: 100%;
+  overflow: hidden;
 }
 #Parent-Div{
   width: 100vw;
@@ -116,10 +118,11 @@
 @media only screen and (max-width:450px){
   #Parent-Div{
      display: flex;
-     height: auto;
+     flex-direction: column;
+     height: 100dvh; /* Adjusts dynamically */   
      border: 2px solid rgb(84, 67, 67);
-     position: fixed;
-     top: 120px;
+     /* position: fixed;
+     top: 120px; */
   }
   #Room{
     position: sticky;
@@ -150,9 +153,9 @@
   #input-Box{
     width: 80%;
     height: 50px;
-    margin-top: 20px;
-    position: relative;
-    bottom: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
   }
   
 }
