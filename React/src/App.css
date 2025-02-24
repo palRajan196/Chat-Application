@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: black;
 }
 #Parent-Div{
   width: 100vw;
@@ -114,7 +115,8 @@
 
 @media only screen and (max-width:450px){
   #Parent-Div{
-  
+     display: flex;
+     height: auto;
   }
   #Room{
     position: sticky;
@@ -130,7 +132,7 @@
   #chat-Box{
     height: 200px;
     margin-top: 10px;
-    position: sticky;
+    /* position: sticky; */
     /* top: 120px; */
     bottom: 50px;
   }
@@ -146,10 +148,8 @@
     width: 80%;
     height: 50px;
     margin-top: 20px;
-    position: sticky;
-    /* top: 340px; */
+    position: relative;
     bottom: 10px;
-    left: 0;
   }
   
 }
