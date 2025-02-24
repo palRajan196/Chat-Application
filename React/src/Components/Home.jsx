@@ -102,6 +102,7 @@ function Home() {
   return (
     <>
       <div id="Parent-Div">
+        <div id="Header">Chat App</div>
       <div id="Room">
             <div id="Live">{(Live)?"Live":""}</div>
             <input type="text" onChange={(e)=>setRoom(e.target.value)}/>
