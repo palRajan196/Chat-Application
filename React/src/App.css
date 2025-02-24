@@ -117,6 +117,9 @@
   #Parent-Div{
      display: flex;
      height: auto;
+     border: 2px solid rgb(84, 67, 67);
+     position: fixed;
+     top: 50px;
   }
   #Room{
     position: sticky;
