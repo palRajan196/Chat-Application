@@ -90,6 +90,7 @@ function Home() {
   }
 
   function joinRoom(){
+    event.preventDefault();
     setHit(true);
      socket.emit("Join-Room",room);
   }
