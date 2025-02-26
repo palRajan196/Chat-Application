@@ -132,7 +132,7 @@ body{
   }
   #Room{
     position: fixed;
-    top: 300px;
+    bottom: 310px;
   }
   #Room #Live{
     color: green;

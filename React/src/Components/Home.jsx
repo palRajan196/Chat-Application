@@ -101,6 +101,7 @@ function Home() {
     <>
       <div id="Parent-Div">
         <div id="Header">Chat App</div>
+        {/* <div id="Icon"><img src="../assets/Chat-Icon.png" alt="" /></div> */}
       <div id="Room">
             <div id="Live">{(Live)?"Live":""}</div>
             <form onSubmit={joinRoom}>
