@@ -1,10 +1,12 @@
 import React, {
   memo,
   useEffect,
+  useRef,
   useState,
 } from "react";
 
 import io from "socket.io-client";
+import Image from "../assets/Chat-Icon.png";
 
 const Backend = import.meta.env.VITE_REACT_APP_BackEnd;
 // const socket = io("http://localhost:5001");
@@ -15,6 +17,7 @@ function Home() {
   const [status, setStatus] = useState("");
   const [room, setRoom] = useState("");
   const [hit, setHit] = useState(false);
+  const inputRef = useRef(null);
 
   useEffect(() => {
     socket.connect();
@@ -76,9 +79,16 @@ function Home() {
     Msg_Box.appendChild(outMsg);
   }
 
+  function focusOnInput(){
+    setTimeout(()=>{
+      inputRef.current?.focus();
+    },0);
+  }
+
 
   function sendMessage() {
     event.preventDefault();
+    focusOnInput();
     ScroleBar();
     appendChild(message,"outMsg");
     socket.emit("message", {room, message});
@@ -101,7 +111,7 @@ function Home() {
     <>
       <div id="Parent-Div">
         <div id="Header">Chat App</div>
-        {/* <div id="Icon"><img src="../assets/Chat-Icon.png" alt="" /></div> */}
+        <div id="Icon"><img src={Image} alt="Image-Icon" /></div>
       <div id="Room">
             <div id="Live">{(Live)?"Live":""}</div>
             <form onSubmit={joinRoom}>
@@ -117,7 +127,7 @@ function Home() {
       </div>
       <div id="input-Box">
           <form onSubmit={sendMessage}>
-            <input type="text" value={message} minLength="1" required onChange={(e) => {setMessage(e.target.value)}} />
+            <input ref={inputRef} type="text" value={message} minLength="1" required onChange={(e) => {setMessage(e.target.value)}} />
             <button type="submit">Send</button>
           </form>
         </div>
