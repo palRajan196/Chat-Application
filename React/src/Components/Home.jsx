@@ -80,9 +80,7 @@ function Home() {
   }
 
   function focusOnInput(){
-    setTimeout(()=>{
       inputRef.current?.focus();
-    },0);
   }
 
 
@@ -115,7 +113,7 @@ function Home() {
       <div id="Room">
             <div id="Live">{(Live)?"Live":""}</div>
             <form onSubmit={joinRoom}>
-            <input type="text" minLength="1" required  onChange={(e)=>setRoom(e.target.value)}/>
+            <input type="text" minLength="1" required  onChange={(e)=>setRoom(e.target.value)} placeholder="Set a room ..."/>
             <button type="submit" disabled={hit}>Set Room</button>
             </form>
         </div>
@@ -127,7 +125,7 @@ function Home() {
       </div>
       <div id="input-Box">
           <form onSubmit={sendMessage}>
-            <input ref={inputRef} type="text" value={message} minLength="1" required onChange={(e) => {setMessage(e.target.value)}} />
+            <input ref={inputRef} type="text" value={message} minLength="1" required onChange={(e) => {setMessage(e.target.value)}}  placeholder="send message ..."/>
             <button type="submit">Send</button>
           </form>
         </div>

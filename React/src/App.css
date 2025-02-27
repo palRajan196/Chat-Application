@@ -30,8 +30,8 @@ body{
   display: none;
 }
 #Icon img{
-  width: 10vw;
-  height: 10vh;
+  width: 100px;
+  height: 100px;
 }
 #chat-Box{
   width: 90%;
