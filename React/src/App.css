@@ -77,7 +77,7 @@ body{
 }
 
 #Msg-Box{
-  width: 100%;
+  width: 100%; 
   display: flex;
   justify-content:space-between;
   flex-direction: column;
@@ -90,7 +90,7 @@ body{
   left: 10%;
 }
 .message{
-  width: 40%;
+  width: fit-content;
   padding: 5px;
   border-radius: 10px;
   font-size: 20px;
@@ -99,13 +99,17 @@ body{
 }
 
 .outMsg{
+  min-width: 30px;
   color: black;
   background-color: rgb(72, 179, 150);
 }
 .inMsg{
+  min-width: 20px;
   background-color: #fff;
   color: black;
   margin-left: 60%;
+  display: flex;
+  align-self: self-end;
 }
 #input-Box{
   width: 80%;
@@ -170,7 +174,7 @@ body{
     bottom: 80px;
   }
   .message{
-    width: 40%;
+    width: fit-content;
     padding: 5px;
     border-radius: 10px;
     font-size: 15px;

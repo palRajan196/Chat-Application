@@ -118,11 +118,11 @@ function Home() {
             </form>
         </div>
         <div id="Status">{status}</div>
-      <div id="chat-Box">
-        <div id="Msg-Box">
-        </div>
 
+      <div id="chat-Box">
+        <div id="Msg-Box"></div>
       </div>
+
       <div id="input-Box">
           <form onSubmit={sendMessage}>
             <input ref={inputRef} type="text" value={message} minLength="1" required onChange={(e) => {setMessage(e.target.value)}}  placeholder="send message ..."/>

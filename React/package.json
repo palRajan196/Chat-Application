@@ -7,7 +7,8 @@
     "deva": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start":"npm run deva"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
