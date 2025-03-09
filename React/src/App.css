@@ -84,10 +84,11 @@ body{
   margin-bottom: 60px;
 }
 .seen-Message{
+  width: 15px;
   color: white;
-  position: relative;
-  top: -15px;
-  left: 10%;
+  position: relative; 
+  top: px;
+  left: 20px;
 }
 .message{
   width: fit-content;

@@ -7,6 +7,7 @@ import React, {
 
 import io from "socket.io-client";
 import Image from "../assets/Chat-Icon.png";
+import tickImage from "../assets/tick.jpg";
 
 const Backend = import.meta.env.VITE_REACT_APP_BackEnd;
 // const socket = io("http://localhost:5001");
@@ -17,6 +18,7 @@ function Home() {
   const [status, setStatus] = useState("");
   const [room, setRoom] = useState("");
   const [hit, setHit] = useState(false);
+  const [seen, setSeen] = useState(false);
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -62,8 +64,10 @@ function Home() {
 
   function seenMessage(){
     let Msg_Box = document.getElementById("Msg-Box");
-    let span = document.createElement("span");
-    span.innerText = "seen";
+    // let span = document.createElement("span");
+    // span.innerText = "seen";
+    let span = document.createElement("img");
+    span.src = tickImage;
     span.classList.add("seen-Message");
     Msg_Box.appendChild(span);
   }
