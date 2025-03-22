@@ -92,17 +92,17 @@ body{
 }
 .message{
   width: fit-content;
+  display: flex;
   padding: 5px;
   border-radius: 10px;
   font-size: 20px;
   margin-bottom: 5px;
-  box-shadow: 2px 2px 5px gray;
+  box-shadow: 2px 2px 5px rgb(194, 192, 192);
 }
-
 .outMsg{
   min-width: 30px;
   color: black;
-  background-color: rgb(72, 179, 150);
+  background-color: rgb(163, 175, 172);
 }
 .inMsg{
   min-width: 20px;
@@ -111,6 +111,11 @@ body{
   margin-left: 60%;
   display: flex;
   align-self: self-end;
+}
+.tick-Image{
+  width: 20px;
+  margin-left: 10px;
+  display: none;
 }
 #input-Box{
   width: 80%;

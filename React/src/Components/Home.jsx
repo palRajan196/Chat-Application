@@ -7,7 +7,7 @@ import React, {
 
 import io from "socket.io-client";
 import Image from "../assets/Chat-Icon.png";
-import tickImage from "../assets/tick.jpg";
+import tickImage from "../assets/tick.png";
 
 const Backend = import.meta.env.VITE_REACT_APP_BackEnd;
 // const socket = io("http://localhost:5001");
@@ -20,6 +20,7 @@ function Home() {
   const [hit, setHit] = useState(false);
   const [seen, setSeen] = useState(false);
   const inputRef = useRef(null);
+  const [tickIndex, setTickIndex] = useState(0);
 
   useEffect(() => {
     socket.connect();
@@ -63,13 +64,16 @@ function Home() {
   }
 
   function seenMessage(){
+    event.preventDefault();
     let Msg_Box = document.getElementById("Msg-Box");
+    let tick = document.getElementsByClassName("tick-Image")[tickIndex-1];
+    tick.style.display = "block";
     // let span = document.createElement("span");
     // span.innerText = "seen";
-    let span = document.createElement("img");
-    span.src = tickImage;
-    span.classList.add("seen-Message");
-    Msg_Box.appendChild(span);
+    // let span = document.createElement("img");
+    // span.src = tickImage;
+    // span.classList.add("seen-Message");
+    // Msg_Box.appendChild(span);
   }
   
  
@@ -80,6 +84,14 @@ function Home() {
     outMsg.classList.add("message");
     outMsg.classList.add(type);
     outMsg.innerText = msg;
+
+    if(type == "outMsg"){
+      const img = document.createElement("img");
+      img.src = tickImage;
+      img.classList.add("tick-Image");
+      outMsg.appendChild(img);
+    }
+   
     Msg_Box.appendChild(outMsg);
   }
 
@@ -96,6 +108,7 @@ function Home() {
     socket.emit("message", {room, message});
     setMessage("");
   //  seenMessage();
+    setTickIndex(tickIndex+1);
   }
 
   function joinRoom(){
