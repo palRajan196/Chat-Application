@@ -66,14 +66,12 @@ function Home() {
   function seenMessage(){
     event.preventDefault();
     let Msg_Box = document.getElementById("Msg-Box");
-    let tick = document.getElementsByClassName("tick-Image")[tickIndex-1];
-    tick.style.display = "block";
-    // let span = document.createElement("span");
-    // span.innerText = "seen";
-    // let span = document.createElement("img");
-    // span.src = tickImage;
-    // span.classList.add("seen-Message");
-    // Msg_Box.appendChild(span);
+    // let tick = document.getElementsByClassName("tick-Image")[tickIndex-1];
+    // tick.style.display = "block";
+    let span = document.createElement("img");
+    span.src = tickImage;
+    span.classList.add("seen-Message");
+    Msg_Box.appendChild(span);
   }
   
  

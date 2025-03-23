@@ -97,12 +97,12 @@ body{
   border-radius: 10px;
   font-size: 20px;
   margin-bottom: 5px;
-  box-shadow: 2px 2px 5px rgb(194, 192, 192);
+  box-shadow: 2px 2px 5px rgb(180, 176, 176);
 }
 .outMsg{
   min-width: 30px;
   color: black;
-  background-color: rgb(163, 175, 172);
+  background-color: rgb(191, 198, 196);
 }
 .inMsg{
   min-width: 20px;
@@ -114,6 +114,7 @@ body{
 }
 .tick-Image{
   width: 20px;
+  height: 25px;
   margin-left: 10px;
   display: none;
 }
